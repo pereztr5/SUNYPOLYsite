@@ -47,14 +47,14 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
             <!-- <li><a href="../contact.html">Contact</a></li> -->
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">NCS</li>
-                <li><a href="450.html">450</a></li>
+                <li class="active"><a href="450.html">450</a></li>
                 <li><a href="490.html">490</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">CS</li>
@@ -75,6 +75,33 @@ protocol stack from the physical to the application layer. Specific topics inclu
 layer security, secure routing protocols, IPsec, SSH, TLS, Web security, authentication and
 key management, and network borne malware such as worms and viruses.</p>
             
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Basic Networking Configuration</h3>
+            </div>
+            <div class="panel-body">
+                In this lab, we will continue getting familiar with the Cisco equipment and working with the configuration files. We will work with the Switch and Router in this lab.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_1_Basic_Config.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Campus Lab Configuration</h3>
+            </div>
+            <div class="panel-body">
+                In this lab, we are setting up the Pods as if they are part of the campus network. We will have our local network, 172.16.2.0/16, be able to talk to any server and host on the campus network but will not be able to reach the outside. Our router will be able to talk to anyone outside of the network and any one on the switch will be able to once we have NAT setup.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_2_Campus_Lab_Config.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Configuring NAT</h3>
+            </div>
+            <div class="panel-body">
+                In this lab, we configured our Cisco router to allow for NAT functionality. Once NAT is set up, we can configure the switch to allow devices connected to it to have Internet access. If everything goes well in the lab, the pod PC should be able to connect to the Internet from the created internal LAN. NAT or Network Address Translation will allow our switch, on the 172.16.2.0/24 network, to be able to talk to anyone outside of the campus network.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_3_NAT.pdf">PDF</a></div>
+        </div>
         
     </div> <!-- /container -->
       

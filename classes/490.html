@@ -47,15 +47,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
             <!-- <li><a href="../contact.html">Contact</a></li> -->
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">NCS</li>
                 <li><a href="450.html">450</a></li>
-                <li><a href="490.html">490</a></li>
+                <li class="active"><a href="490.html">490</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">CS</li>
                 <li><a href="370.html">370</a></li>
@@ -84,7 +84,7 @@ is how we will be editing files on our CentOS box. This lab was to initially get
 Minimal VM. We walk through step on how to set up basic networking, partition resizing, and managing
 user and groups.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/Lab_1.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -100,7 +100,7 @@ easier and in the way we want it. In the end we were assigned a task to produce 
 banner with some information about our machine and environment that must be displayed
 every time the user logged in.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/NCS_CLI_Lab.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -110,7 +110,7 @@ every time the user logged in.
                 In this lab we learned about the Bash remote code execution vulnerability. This has been
 named the "Shell Shock" vulnerability found within Bash.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/ShellShock.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -123,7 +123,7 @@ already dealt with scripting in our previous lab to run certain commands on star
 bash script we edited was called the bashrc file which was executed every time we logged
 on.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/Bash_Lab.pdf">PDF</a></div>
         </div>
         
         <div class="panel panel-default">
@@ -144,7 +144,7 @@ DNSSEC makes sure that the DNS record is authentic and helps fight DNS spoofing 
 also known as DNS Poisoning. DNS Poisoning is when someone would replace the original IP
 address of the domain name with a different one which would cause you to go to the wrong cite.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/NCS490Proposal.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -158,7 +158,7 @@ and hardware specs and so it would run smoother and also be more light weight si
 installing what we want. Although it is not necessary to do this all the time it is a good practice for
 when we need to built the best system for a specific task and would want it to run well.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/Compile_and_Kernel.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -172,7 +172,7 @@ steals or destroys our data. One of the most common ways is to implement and enf
 policies. Other security measures are to not run things we do not need and to have an anti-virus. There
 are also network security measures we can implement to improve our system's security.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/Hardening_Lab.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -187,7 +187,7 @@ Although our ISP or Google have a DNS server in which we could use we wanted a l
 could use domain names instead of IP address on our LAN. There are other benefits to having your own
 DNS like caching and blocking unwanted websites or certain IP addresses.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/DNS_Lab.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -198,7 +198,7 @@ DNS like caching and blocking unwanted websites or certain IP addresses.
 it. The FTP install and setup was easy but we had to add some iptables rules to allow FTP and also add a
 module in our iptables-config file.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/FTP_Server.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -210,7 +210,7 @@ Transfer Protocol Secure, setup userdir, and looked into the use of .htaccess an
 was all done to setup a secure web server so we could see how it worked. We used our very own ssl,
 Secure Socket Layer, certifications to test and see if our site worked over HTTPS.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/HTTP_Lab.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -220,7 +220,7 @@ Secure Socket Layer, certifications to test and see if our site worked over HTTP
                 For this lab we sercured our system when using ssh, which we use to connect to our machines remotely.
 We also setup access so we could access our machine from another without a password.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/SSH_Lab.pdf">PDF</a></div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -229,7 +229,7 @@ We also setup access so we could access our machine from another without a passw
             <div class="panel-body">
                 For my final project I implemented DNSSEC on a local machine to show the steps to do. Since I was on a internal network I could not put my DNS server in the open and show my own DNS server working with DNSSEC. Instead I showed other domains that were on a DNS server with DNSSEC implemented.
             </div>
-            <div class="panel-footer">PDF</div>
+            <div class="panel-footer"><a class="btn btn-default" href="../labs/Final_Project.pdf">PDF</a></div>
         </div>
         
     </div> <!-- /container -->
