@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://getbootstrap.com/examples/theme/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- top icon goes here 
+    <link rel="icon" href="#">
+    -->
+    
+    <title>TP's Site</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../custom.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../Theme Template for Bootstrap_files/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document" data-feedly-mini="yes">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.cs.sunyit.edu/~pereztr">Tony Perez</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classes <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">NCS</li>
+                <li><a href="450.html">450</a></li>
+                <li><a href="490.html">490</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">CS</li>
+                <li><a href="370.html">370</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="../blog.html">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" role="main">
+        <div class="row">
+        
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <h1>Setup CentOS 6.6 64-bit Guide</h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by <a href="about.html">Tony Perez</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on April 6, 2015 at 3:26 AM</p>
+
+            <hr>
+
+            <!-- Post Content -->
+
+            <h3 id="setup-networking">Setup Networking</h3>
+
+            <ul>
+            <li>Edit <code>eth0</code> script file <br>
+            <code>vi /etc/sysconfig/network-scripts/ifcfg-eth0</code> <br>
+            <ul><li>Change <br>
+            <code>ONBOOT=no</code> -&gt; <code>ONBOOT=yes</code>  </li></ul></li>
+            <li>Save and run <br>
+            <code>service network restart</code> <br>
+            <code>yum -y update</code></li>
+            </ul>
+
+
+
+            <h3 id="personal-prerequisites">Personal Prerequisites</h3>
+
+            <ul>
+            <li>Install vim and screen <br>
+            <code>yum -y install vim screen</code>  </li>
+            </ul>
+
+
+
+            <h3 id="configure-ssh-access">Configure SSH Access</h3>
+
+            <ul>
+            <li>Add a user to login with (We are going to not allow root SSH access) <br>
+            <code>useradd tony</code></li>
+            <li>Put a password <br>
+            <code>passwd tony</code></li>
+            <li>Add user to the wheel group so they can use <code>sudo</code> <br>
+            <code>usermod -G wheel tony</code></li>
+            <li>Edit sudo config <br>
+            <code>visudo</code></li>
+            <li>Uncomment the wheel group line(note: There will be two wheel group lines. One will allow the wheel group to sudo but request a password the other without a password. I chose the one without a password) <br>
+            <code># %wheel ALL=(ALL) ALL</code> <br>
+            to <br>
+            <code>%wheel ALL=(ALL) ALL</code></li>
+            </ul>
+
+
+
+            <h3 id="prerequisites-for-snort-barnyard2-pulledpork-snorby">Prerequisites for <a href="https://www.snort.org/">Snort</a>, <a href="https://github.com/firnsy/barnyard2">Barnyard2</a>, <a href="https://code.google.com/p/pulledpork/">PulledPork</a>, &amp; <a href="https://www.snorby.org/">Snorby</a>:</h3>
+
+            <ul>
+            <li>Install prerequisites according to <a href="http://www.thehackerchronicles.com/snort-barnyard2-snorby-and-pulledpork-install-on-centos-6-5/">snort guide</a> <br>
+            <code>yum -y install wget gcc flex bison zlib zlib-devel libpcap libpcap-devel pcre pcre-devel tcmpdump mysql mysql-server mysql-devel git libtool curl man kernel-devel</code>  </li>
+            </ul>
+
+
+
+            <h3 id="install-necessary-libdnet-libdnet-devel">Install necessary <a href="http://pkgs.org/centos-6/epel-x86_64/libdnet-1.12-6.el6.x86_64.rpm.html">libdnet</a> &amp; <a href="http://pkgs.org/centos-6/epel-x86_64/libdnet-devel-1.12-6.el6.x86_64.rpm.html">libdnet-devel</a></h3>
+
+            <p><code>rpm -Uvh  http://dl.fedoraproject.org/pub/epel/6/x86_64/libdnet-1.12-6.el6.x86_64.rpm</code> <br>
+              <code>rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/libdnet-devel-1.12-6.el6.x86_64.rpm</code></p>
+
+
+
+            <h3 id="make-a-dir-for-snort-prerequisite-sources">Make a dir for Snort prerequisite sources</h3>
+
+            <ul>
+            <li>Make the dir <br>
+            <code>mkdir /usr/local/src/snort</code>  </li>
+            <li>Go into that dir <br>
+            <code>cd /usr/local/src/snort</code>  </li>
+            <li>All downloaded files for snort will go here  </li>
+            </ul>
+
+
+
+            <h3 id="compile-install-daq-from-source">Compile &amp; Install daq from source</h3>
+
+            <ul>
+            <li>Download daq file from <a href="https://www.snort.org/downloads">Snort’s website</a> <br>
+            <code>wget https://www.snort.org/downloads/snort/daq-2.0.4.tar.gz -O daq.tar.gz</code>  </li>
+            <li>Unzip daq <br>
+            <code>tar -xzvf daq.tar.gz</code>  </li>
+            <li>Go into the daq dir we just unzipped <br>
+            <code>cd daq-2.0.4</code>  </li>
+            <li>Compile and install <br>
+            <code>./configure</code> <br>
+            <code>make</code> <br>
+            <code>make install</code> <br>
+            <code>cd /usr/local/lib</code> <br>
+            <code>ldconfig -v /usr/local/lib</code></li>
+            </ul>
+
+
+
+            <h3 id="compile-install-snort-from-source">Compile &amp; Install Snort from source</h3>
+
+            <ul>
+            <li>Download the snort from <a href="https://www.snort.org/downloads">Snort’s website</a> <br>
+            <code>wget https://www.snort.org/downloads/snort/snort-2.9.7.2.tar.gz -O snort.tar.gz</code>  </li>
+            <li>Unzip snort file <br>
+            <code>tar -zxvf snort.tar.gz</code>  </li>
+            <li>Go into the snort dir we just unzipped <br>
+            <code>cd snort-2.9.7.2</code>  </li>
+            <li>Compile Snort <br>
+            <code>./configure -enable--sourcefire</code> <br>
+            <code>make</code> <br>
+            <code>make install</code> <br>
+            <code>cd /usr/local/lib</code> <br>
+            <code>ldconfig -v /usr/local/lib</code>  </li>
+            </ul>
+
+
+
+            <h3 id="make-dir-for-snort-and-extract-files">Make dir for Snort and Extract files</h3>
+
+            <ul>
+            <li>Make a snort dir in <code>/etc/</code> <br>
+            <code>mkdir /etc/snort</code>  </li>
+            <li>Go into the dir <br>
+            <code>cd /etc/snort</code>  </li>
+            <li>Copy files from the dir we installed snort from into the current dir <br>
+            <code>cp /usr/local/src/snort/snort/snort-2.9.7.2/etc/* .</code>  </li>
+            <li>Register on <a href="https://www.snort.org/">Snort</a>’s website to be able to get a snapshot of their registered rules and download it  </li>
+            <li>We will download our rules into our <code>/usr/local/src/snort</code> dir <br>
+            <code>cd /usr/local/src/snort</code>  </li>
+            <li>Replace <code>&lt;oinkcode&gt;</code> with your oinkcode given after you registered <br>
+            <code>wget https://www.snort.org/rules/&lt;file_name&gt;?oinkcode=&lt;oinkcode&gt;</code>  </li>
+            <li>Go back into <code>/etc/snort</code> and extrace the file there <br>
+            <code>cd /etc/snort</code> <br>
+            <code>tar -zvxf /usr/local/src/snort/snortrules-snapshot-2972.tar.gz</code>  </li>
+            <li>Copy the files in the <code>etc</code> dir to your current dir <br>
+            <code>cp etc/* .</code>  </li>
+            <li>Make a <code>white_list.rules</code> &amp; <code>black_list.rules</code> file and put in in the rules dir <br>
+            <code>touch rules/white_list.rules rules/black_list.rules</code>  </li>
+            </ul>
+
+
+
+            <h3 id="create-user-and-group-for-snort">Create User and Group for Snort</h3>
+
+            <ul>
+            <li>We will be using [Bill Parker’s guide] to add a snort user and group  </li>
+            <li>Add a group called snort with GID 40000 <br>
+            <code>groupadd -g 40000 snort</code>  </li>
+            <li>Add a user called snort with UID 40000. We will also change the path it belongs to and will not allow it to login by giving it no shell <br>
+            <code>useradd snort -u 40000 -d /var/log/snort -s /sbin/nologin -c SNORT_IDS -g snort</code>  </li>
+            </ul>
+
+
+
+            <h3 id="fix-permissions">Fix Permissions</h3>
+
+            <ul>
+            <li>Make user snort the owner of the snort dir in <code>/etc</code> <br>
+            <code>cd /etc/snort</code> <br>
+            <code>chown -R snort:snort *</code>  </li>
+            <li>Make user snort the owner of the snort fir in <code>/var/log</code> <br>
+            <code>chown -R snort:snort /var/log/snort</code>  </li>
+            </ul>
+
+
+
+            <h3 id="fix-paths-in-snortconf">Fix paths in snort.conf</h3>
+
+            <ul>
+            <li>In <code>/etc/snort</code> edit the snort.conf file  </li>
+            <li>Find:  </li>
+            </ul>
+
+
+
+            <pre class="prettyprint"><code class=" hljs cs">  <span class="hljs-keyword">var</span> RULE_PATH ../rules  
+              <span class="hljs-keyword">var</span> SO_RULE_PATH ../so_rules
+              <span class="hljs-keyword">var</span> PREPROC_RULE_PATH ../preproc_rules
+              <span class="hljs-keyword">var</span> WHITE_LIST_PATH ../rules
+              <span class="hljs-keyword">var</span> BLACK_LIST_PATH ../rules</code></pre>
+
+            <ul>
+            <li>Change to:  </li>
+            </ul>
+
+
+
+            <pre class="prettyprint"><code class=" hljs cs">  <span class="hljs-keyword">var</span> RULE_PATH /etc/snort/rules  
+              <span class="hljs-keyword">var</span> SO_RULE_PATH /etc/snort/so_rules
+              <span class="hljs-keyword">var</span> PREPROC_RULE_PATH /etc/snort/preproc_rules
+              <span class="hljs-keyword">var</span> WHITE_LIST_PATH /etc/snort/rules
+              <span class="hljs-keyword">var</span> BLACK_LIST_PATH /etc/snort/rules</code></pre>
+
+            <ul>
+            <li>If you wish to monitor a specific network change: <br>
+            <code>ipvar HOME_NET any</code> <br>
+            to something like (put your network) <br>
+            <code>ipvar HOME_NET 192.168.2.0/24</code></li>
+            <li>If you do change your <code>HOME_NET</code> then make sure your also chagne the <code>EXTERNAL_NET</code> <br>
+            <code>ipvar EXTERNAL_NET any</code> <br>
+            to <br>
+            <code>ipvar EXTERNAL_NET !$HOME_NET</code></li>
+            <li><p>This means the the <code>EXTERNAL_NET</code> will any IP that is not in your <code>HOME_NET</code> range</p></li>
+            <li><p>Make snort the owner of some other file we used before recommended by [Bill Parker’s guide] <br>
+            <code>cd /usr/local/src</code> <br>
+            <code>chown -R snort:snort snort</code> <br>
+            <code>chmod -R 700 snort/daq-2.0.4</code> <br>
+            <code>chmod -R 700 snort/snort-2.9.7.2</code> <br>
+            <code>chown -R snort:snort snort_dynamicsrc</code> <br>
+            <code>chmod -R 700 snort_dynamicsrc</code>  </p></li>
+            </ul>
+
+            <h3 id="add-snort-initialization-script">Add snort initialization script</h3>
+
+            <ul>
+            <li>Copy the script into <code>/etc/init.d</code> <br>
+            <code>cp /usr/local/src/snort/snort-2.9.7.2/rpm/snortd /etc/init.d/</code>  </li>
+            <li>Make it executable <br>
+            <code>chomd +x /etc/init.d/snortd</code>  </li>
+            <li>Make symbolic link for snort <br>
+            <code>cd /usr/sbin</code> <br>
+            <code>ln -s /usr/local/bin/snort snort</code>  </li>
+            <li>Copy another script into the <code>/etc/sysconfig</code> dir <br>
+            <code>cp /usr/local/src/snort/snort-2.9.7.2/rpm/snort.sysconfig /etc/sysconfig/snort</code>  </li>
+            <li>Put correct permissions <br>
+            <code>chown snort:snort /etc/sysconfig/snort</code> <br>
+            <code>chmod 700 /etc/sysconfig/snort</code>  </li>
+            </ul>
+
+
+
+            <h3 id="correct-permissions">Correct Permissions</h3>
+
+            <ul>
+            <li>Change permissions in <code>/var/log</code> <br>
+            <code>cd /var/log</code>  </li>
+            <li>Make a snort dir if it does not exist <br>
+            <code>mkdir snort</code> <br>
+            <code>chmod 700 snort</code> <br>
+            <code>chown -R snort:snort snort</code>  </li>
+            <li>Change permissions in <code>/usr/local/lib</code> <br>
+            <code>cd /usr/local/lib</code> <br>
+            <code>chown -R snort:snort snort*</code> <br>
+            <code>chown -R snort:snort snort_dynamic*</code> <br>
+            <code>chown -R snort:snort pkgconfig</code>  </li>
+            <li>Change permissions in <code>/usr/local/bin</code> <br>
+            <code>cd /usr/local/bin</code> <br>
+            <code>chown -R snort:snort daq-modules-config</code> <br>
+            <code>chown -R snort:snort u2*</code> <br>
+            <code>chmod -R 700 daq-modules-config</code> <br>
+            <code>chmod 700 u2*</code>  </li>
+            <li>Change permissions in <code>/etc</code> <br>
+            <code>cd /etc</code> <br>
+            <code>chown -R snort:snort snort</code> <br>
+            <code>chown -R 700 snort</code>  </li>
+            </ul>
+
+
+
+            <h3 id="add-missing-dir">Add Missing Dir</h3>
+
+            <ul>
+            <li>Add the <code>snort_dynamicrules</code> dir <br>
+            <code>mkdir -p /usr/local/lib/snort_dynamicrules</code> <br>
+            <code>chown -R snort:snort /usr/local/lib/snort_dynamicrules</code> <br>
+            <code>chmod -R 700 /usr/local/lib/snort_dynamicrules</code>  </li>
+            </ul>
+
+
+
+            <h3 id="test-snort">Test Snort</h3>
+
+            <ul>
+            <li>First test configuration file <br>
+            <code>snort -T -i eth0 -u snort -g snort -c /etc/snort/snort.conf</code>  </li>
+            <li>If you get something that ends with:</li>
+            </ul>
+
+
+
+            <pre class="prettyprint"><code class=" hljs livecodeserver">  Snort successfully validated <span class="hljs-operator">the</span> configuration!
+              Snort exiting</code></pre>
+
+            <p>You are set <br>
+            - Start snort <br>
+              <code>service snortd start</code> <br>
+              You should get an ok but if you don’t you can always check the logs if anything goes wrong with <br>
+              <code>tail -f /var/log/messages</code> <br>
+            - I recommend using a screen session to tail the logs while your urn the start command  </p>
+        </div>
+
+</div> <!-- /container -->
+
+
+<!-- Footer -->        
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <span class="text-muted">Copyright &copy; Tony Perez 2015</span>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-inline">
+                <a href="mailto:pereztr@sunyit.edu"><img class="img-responsive center-block" src="../img/googlemail-32.png" alt="gmail link"></a>
+            </ul>
+        </div>
+      </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../Theme Template for Bootstrap_files/jquery.min.js"></script>
+<script src="../Theme Template for Bootstrap_files/bootstrap.min.js"></script>
+<script src="../Theme Template for Bootstrap_files/docs.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../Theme Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+</body></html>
