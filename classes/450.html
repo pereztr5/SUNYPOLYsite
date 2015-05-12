@@ -105,7 +105,7 @@ key management, and network borne malware such as worms and viruses.</p>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Local Users, SSH, NTP, andSyslog</h3>
+                <h3 class="panel-title">Local Users, SSH, NTP, and Syslog</h3>
             </div>
             <div class="panel-body">
                  In this lab, we are creating a user on the router to be used for sshing. We need to enable SSH on the router by creating public/private keys. The POD PC will be used to connect to the router over the LAN. After we have a successful connection, the syslog server can be configured. It will be using the server from CS department and the main purpose of this is to log files in one place including user login, configuration changes, etc.
@@ -123,12 +123,48 @@ key management, and network borne malware such as worms and viruses.</p>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
+                <h3 class="panel-title">Basic Access Control Lists</h3>
+            </div>
+            <div class="panel-body">
+                 In this lab, we are setting up and configuring Access Control lists on our router. We want only our pod PC to have access to the router and block everything else. We don’t want any outside users trying to connect to our router and being able to make changes. We also need to set up access to the ftp server so we can get our saved configuration files.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_5__Basic_Access_Control_Lists.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Inter VLAN Routing with Trunking</h3>
+            </div>
+            <div class="panel-body">
+                 In this lab we learned about VLANs and trunking and how to set it up on router and switch. On the router, we must create subinterfaces and tag them with encapsulation dot1Q. Over on the switch, we will create multiple VLANS and give them each different names and an IP address. These VLANS must be assigned to different ports on the switch. VLAN 20 will be assigned to the fa0/1 interface, which will be configured as the native vlan.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_6__Inter_VLAN.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ASA and IPSec Tunnel</h3>
+            </div>
+            <div class="panel-body">
+                 In this lab we setup a encrypted tunnel between two pods in our classroom network. Both our pods are different networks and it will show that we can transfer data and secure it by encrypting it over an open network.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Lab_7__ASA.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Wireshark</h3>
+            </div>
+            <div class="panel-body">
+                 In this Lab we used Wireshark and tcpdump as our networking monitor tools. We set up a span port on the switch to monitor the traffic being sent and received through the gateway. A Kali Laptop is used on the span port to view all the traffic in our network.
+            </div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Wireshark_Lab_450.pdf">PDF</a></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
                 <h3 class="panel-title">Snort Project Final</h3>
             </div>
             <div class="panel-body">
                 <iframe src="https://docs.google.com/presentation/d/1Y8Wd2HSCIvNw-qxUQ_Lh3mdEGCVZMw1dzSDQNb5Nib8/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
-            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/#">PDF</a></div>
+            <div class="panel-footer"><a class="btn btn-default" href="../ncs450labs/Snort_Final.pdf">PDF</a></div>
         </div>
         
     </div> <!-- /container -->
