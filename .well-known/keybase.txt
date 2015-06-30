@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/perezt
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://lookuptony.com
+  * I am perezt (https://keybase.io/perezt) on keybase.
+  * I have a public key with fingerprint 3F51 A461 EAD9 AA0D CF6C  9B43 A42D 7DC8 8726 BE48
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.9"
+        },
+        "key": {
+            "fingerprint": "3f51a461ead9aa0dcf6c9b43a42d7dc88726be48",
+            "host": "keybase.io",
+            "key_id": "A42D7DC88726BE48",
+            "uid": "21e9b023fd95ee4047e0fbde2657ac19",
+            "username": "perezt"
+        },
+        "merkle_root": {
+            "ctime": 1435624869,
+            "hash": "9ab45febc11f94cf43a86f6481d958d2df867b146f6cc3fdc07f55b6985417ebacd29179eb4c437ba2a3291c8784f0a705da760b5cc2647ddb0f07d46bc2b6d8",
+            "seqno": 254126
+        },
+        "service": {
+            "hostname": "lookuptony.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1435625171,
+    "expire_in": 157680000,
+    "prev": "b8c0279aef664e1321d6fd188d9dcfefb920e38b5f8256fd2c36f827db3cb140",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owFVUntQVFUYX1Z5iPKYsbQERrwxQirsfZz7wjR5LUTTwxpUnEG659xz5cK6d9td
+VhFJKGKHUUZgBhotdUZJqHiUIwqEMZMwQuowSYgNG6lTIoLYjD2oKLqXoSnPX+d8
+3+/7fb/f953qkEWmYL+G+JJ+79ovMvyuTEBTVs3doWICanIRkVhMIJuK7W7jZpf2
+YCKRKMBFUHLhBFWLtmsyTsh3RS9gNhAe7HSpml1HkQl8gkiUbDDgRrGi2ndjp8Op
+GlwEo7CUBDgKS7IoSaSMFA6JEDASoGVeRoLA0xzEQNAp8zSX+7GuxDxnrirr0SRA
+p/KpKfP45LR5fOF8gqawCEmaUWSRxRiQgMekAmVMcywvIUo0gC7sXLDkwE68322o
+3YOdBTac69S0ecvIrRoACjAsRwOBE3U9kitPLxElCFgFQ0RRigiQomsXOIUDAqV3
+FGRaVgSOhxTQYwjpMhDJKywLOVFgAcVjKCGZFilexBAgwPBQoiVGDyCBF4BCSjzJ
+yhLPkZBFiOYAL8uQVEheBhxENORkw6kLv2nXiERaJ6S5EuPt9KgIG7qNoS14s2la
+QaHDrdmLEpC2Ry9zODW3hjSbnstzux2Jhm13kcPA7sUwt2WBJheqdllf2v+3SunQ
+x0bCUjy1gcD7HKoT56oGguU5gdSP0Qd7dE4oIJLmRQkrHAcwxdCUzCkyJQiyqK8d
+K1CkScwIkFUEmtUzNGI4/crLkEH6/Mj/jAJdp7Rbp3Spu+2Su9CJiZJKc+Rik1+w
+KcDfbHxbU/CS8H//8o6hsDnrr2mrz8VEvrc5tj4uKnJquvidG1zgyZ6PYLln2Ssp
+DXGlo/2rsm/E+K2hX/McORlfszpnyndlcK1puo+XD03sajxIJjWZmdCMC65PLq84
+3zcz1sSGH9tk/Qy/dceyxn+64ruOfu/xSy3b4cst5UHX90U17u0dvN9N+K6at1WU
+5Nl6H8wG3ka1ln2zY+O20boIRlkWcrP7XExtmWN4hW9sx6c/3u+syQxjbj06EVvX
+eid+qHzOy0wc/bsu85nW4M5rPpjVMB67ybUz6qvg/JiLX8Pp0Kea727t2ik0N/3W
+FfXXZIp3y9s5FfuXVNV19LTXZkV0x8KAXX0hB97fNNcRl53cm/6u9TJXf8HaWha/
+cWBHlwKGr/IrH/7esS0Z5Ac9+EkZBKumQtwHD30we+qbgfMRTM7iwJ5bR7Otg6el
+9s+rLJNnnmgL2ljYdst6rSyA3XlpxFY51CyXJV16oaon6dHck3+Ex0z5/syYmbxc
+mds3U9WvrDuw/uNFW6ypb3xZ5U5ko557ttMvcHv598sVX7d6+8N7v7Td9A7UL7Uo
+6WSjuPLn5/M2D02Z1sdVFkj3zPnc6dCz7YfvVkT3nkrJnKSWbw2PiBsuLrWssyw5
+4j1zNTaw2u5/MZ+5s/iY+fDrnqejW3rOptmPW0aryZdeHNh8/eH4D+zSbwNGT5hH
+SsNGcqIz04tfbUP/AA==
+=fknT
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/perezt
+
+==================================================================
