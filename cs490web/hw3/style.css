@@ -1,0 +1,49 @@
+body {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    background: #E8F1F2;
+    color: #13293D;
+}
+
+header {
+    margin: 0 5% 0 5%;
+}
+
+nav {
+    background: #1B98E0;
+    width: 100%;
+}
+
+nav ul {
+    margin-left: 5%;
+    padding: 1% 0;
+    display: block;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    color: #E8F1F2;
+    text-decoration: none;
+}
+
+section {
+    margin: 0 5% 0 5%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: #247BA0;
+}
+
+footer {
+    margin: 0 5% 0 5%;
+    bottom: 0;
+    background: #E8F1F2;
+}
