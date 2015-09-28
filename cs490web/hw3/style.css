@@ -9,24 +9,35 @@ header {
 }
 
 nav {
-    background: #1B98E0;
+    background: #247BA0;
     width: 100%;
 }
 
 nav ul {
     margin-left: 5%;
-    padding: 1% 0;
+    padding: 5px 0;
     display: block;
 }
 
 nav li {
+    /* Takes up only as much width as it needs, and does not force new line  */
     display: inline;
-    margin-right: 15px;
+    padding: 5px 15px;
+}
+
+nav li:hover {
+    /* background: #2372A0; */
+    box-shadow: inset 0 0 1.3em #0D6489;
 }
 
 nav a {
     color: #E8F1F2;
+    /* Remove link color and hover over effect */
     text-decoration: none;
+}
+
+section a:hover {
+    color: #1A66E0;
 }
 
 section {
@@ -34,6 +45,7 @@ section {
 }
 
 ul {
+    /* Remove bullets in list */
     list-style-type: none;
     padding: 0;
 }
