@@ -4,6 +4,11 @@ body {
     color: #13293D;
 }
 
+a {
+    text-decoration: none;
+    color: #13293D;
+}
+
 header {
     margin: 0 5% 0 5%;
 }
@@ -16,7 +21,6 @@ nav {
 nav ul {
     margin-left: 5%;
     padding: 5px 0;
-    display: block;
 }
 
 nav li {
@@ -36,22 +40,22 @@ nav a {
     text-decoration: none;
 }
 
-section a:hover {
-    color: #1A66E0;
+main {
+    margin: 0 5% 0 5%;
 }
 
-section {
-    margin: 0 5% 0 5%;
+main a {
+    color: #247BA0;
+}
+
+main a:hover {
+    color: #1A66E0;
 }
 
 ul {
     /* Remove bullets in list */
     list-style-type: none;
     padding: 0;
-}
-
-a {
-    color: #247BA0;
 }
 
 footer {
