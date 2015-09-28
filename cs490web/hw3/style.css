@@ -26,7 +26,7 @@ nav li {
 }
 
 nav li:hover {
-    /* background: #2372A0; */
+    /* inset: make shadow inside frame | offset -x | offset-y | color-radius | color */
     box-shadow: inset 0 0 1.3em #0D6489;
 }
 
