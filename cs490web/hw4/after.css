@@ -1,8 +1,8 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     font-size: 12px;
     color: #6A6A6A;
-    background: #D5D7D7;
+    background: #FFF;
 }
 
 #wrap {
@@ -55,6 +55,13 @@ nav {
     background: #EEEEEE;
     width: 100%;
     height: 55px;
+    z-index: 1;
+    position: relative;
+}
+
+.positionNav {
+    width: 660px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -112,6 +119,7 @@ nav ul ul {
     display: none;
     position: absolute; 
     top: 100%;
+    box-shadow: 0 -1px 5px #212121;
 }
 
 nav ul li:hover > ul {
@@ -135,6 +143,10 @@ nav ul ul li a:hover {
     border-right: none;
 }
 
+nav ul ul li:first-child {
+    border-top: none;
+}
+
 nav ul ul li:last-child {
     border-right: none;
 }
@@ -142,7 +154,6 @@ nav ul ul li:last-child {
 main {
     padding: 0 25px;
     overflow: auto;
-    margin-bottom: 10px;
 }
 
 main h1, h2, h3, h4, h5 {
@@ -164,6 +175,19 @@ main h1, h2, h3, h4, h5 {
     width: 32%;
     float: left;
     margin-left: 2%;
+    margin-top: 50px;
+}
+
+@media all and (max-width: 768px) {
+    .mainContent {
+        width: 100%;
+    }
+    
+	.sideWidgets {
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 10%;
+    }
 }
 
 aside h5 {
@@ -199,12 +223,18 @@ aside .calName {
 }
 
 .widgetImage {
-    padding: 50px;
+    padding: 15%;;
 }
 
 header em {
     color: #444444;
     font-size: .9em;
+}
+
+
+
+.table-emb {
+    padding: 0;
 }
 
 .beforeAfter {
@@ -218,16 +248,8 @@ header em {
 }
 
 footer {
-    background: #2D2D2D;
-    border-top: 5px solid #eee;
-    height: 80px;
-}
-
-.insideFooter {
-    background: #222222;
-    color: #B6B1B1;
-    margin-top: 32px; 
-    height: 43px;
-    padding-left: 25px;
-    padding-top: 15px;
+    background: #383838;
+    color: white;
+    height: 45px;
+    padding: 15px 25px;
 }
