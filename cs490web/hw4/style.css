@@ -2,6 +2,15 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     color: #6A6A6A;
+    background: #D5D7D7;
+}
+
+#wrap {
+    margin: 40px auto;
+    background: white;
+    overflow: auto;
+    padding: 0;
+    box-shadow: 0px 0px 3px #888888;
 }
 
 a {
@@ -19,6 +28,7 @@ header {
 
 header h1 {
     margin:0;
+    font-size: 2.5em;
 }
 
 header a {
@@ -30,33 +40,35 @@ header a:hover {
     text-decoration: none;
 }
 
-
 header p {
     margin: 5px 0;
     font-size: .8em;
     color: #444444;
 }
 
-nav {
+.fillerNav {
     background: #383838;
-    width: 100%;
     height: 50px;
 }
 
-nav ul {
-    float: left;
-    padding: 0;
-    margin: 0;
-    border-right: 1px solid #000000;
+nav {
+    background: #EEEEEE;
+    width: 100%;
+    height: 55px;
 }
 
-nav li {
+nav ul {
+    background: #383838;
+    padding: 0;
+    position: relative;
+	display: inline-table;
+    list-style: none;
+}
+
+nav ul li {
     float: left;
-    display: inline;
     padding: 0;
     color: #FFFFFF;
-    position: relative;
-    text-align: center;
     border-left: 1px solid #000000;
 }
 
@@ -65,14 +77,14 @@ nav li:first-child {
 }
 
 nav li:last-child {
-    border-right: none;
+    border-right: 1px solid #000000;
 }
 
 nav li:hover {
     background-color: #F15A23;
 }
 
-nav a {
+nav ul a {
     font-size: 12px;
     color: #6A6A6A;
     display: block;
@@ -85,7 +97,7 @@ nav a {
     border-right: 1px solid rgba(255,255,255, 0.1);
 }
 
-nav a:hover {
+nav ul a:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -94,8 +106,42 @@ nav a:hover {
     background-color: #F15A23;
 }
 
+nav ul ul {
+    background: #383838;  
+    padding: 0;
+    display: none;
+    position: absolute; 
+    top: 100%;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    float: none;
+    border-left: none;
+    border-top: 1px solid #000000;
+    position: relative;
+}
+
+nav ul ul li a {
+    color: #FFFFFF;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+}	
+nav ul ul li a:hover {
+    background: #F15A23;
+    border-right: none;
+}
+
+nav ul ul li:last-child {
+    border-right: none;
+}
+
 main {
     padding: 0 25px;
+    overflow: auto;
 }
 
 main h1, h2, h3, h4, h5 {
@@ -145,4 +191,17 @@ aside .calTitle {
 aside .calName {
     padding-left: 5px;
     background-color: #DDDDDD;
+}
+
+.gCal {
+    margin-bottom: 30px;
+}
+
+.widgetImage {
+    padding: 50px;
+}
+
+header em {
+    color: #444444;
+    font-size: .9em;
 }
