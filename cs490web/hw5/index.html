@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+    <title>HW 5</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Add Class</h1>
+            <form>
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control" id="student" placeholder="Name">
+                <label for="nameInput">Class</label>
+				<select class="form-control" id="class">
+				  <option value="cs490">CS 490</option>
+				  <option value="ncs490">NCS 490</option>
+				</select>
+            </div>
+            <button type="button" class="btn btn-default" onclick="loadTable()">Add</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <h1>Course List</h1>
+			
+			<!-- Course list will be added here -->
+            <h5>CS 490:</h5>
+            <ul id="cs490List">
+            </ul>
+
+            <h5>NCS 490:</h5>
+            <ul id="ncs490List">
+            </ul>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+</div>
+</body>
+</html>
