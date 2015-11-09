@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+    <title>HW 6</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Add Class</h1>
+            <form>
+            <div class="form-group" id="studentName">
+                <label class="control-label" for="student">Name</label>
+                <input type="text" class="form-control" id="student" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="nameInput">Class</label>
+				<select class="form-control" id="class">
+				  <option value="cs490">CS 490</option>
+				  <option value="ncs490">NCS 490</option>
+				</select>
+            </div>
+            <div id="loading">
+                <button type="button" class="btn btn-default" id="add" onclick="loadTable()">Add</button>
+            </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <h1>Course List</h1>
+			
+			<!-- Course list will be added here -->
+            <h5>CS 490:</h5>
+            <div class="list-group" id="cs490List">
+                <button type='button' class='list-group-item'>No Students</button>
+            </div>
+
+            <h5>NCS 490:</h5>
+            <div class="list-group" id="ncs490List">
+                <button type='button' class='list-group-item'>No Students</button>
+            </div>
+        </div>
+        <!-- Extra Credit Portion -->
+        <div class="hiddenModal">
+        <!-- Modal -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
