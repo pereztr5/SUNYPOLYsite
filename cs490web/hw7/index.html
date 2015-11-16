@@ -7,6 +7,18 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- 
+Used to make the information scrollable so they do not have scroll through
+ the whole page
+-->
+<style>
+.details {
+    margin-top: 69px;
+    height: 610px;
+    overflow: auto;
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -31,25 +43,29 @@
             </form>
         </div>
         <div class="col-md-4">
-            <h1>Course List</h1>
+            <h1>Course Details</h1>
 			
-			<!-- Course list will be added here -->
-            <h5>CS 490:</h5>
-            <div class="list-group" id="cs490List">
-                <button type='button' class='list-group-item'>No Students</button>
+            <!-- Student Button -->
+            <div class="list-group" id="studentSection">
+                <button type='button' class='list-group-item loadInfo' data-type="student">Students</button>
             </div>
 
-            <h5>NCS 490:</h5>
-            <div class="list-group" id="ncs490List">
-                <button type='button' class='list-group-item'>No Students</button>
+            <!-- Course Button -->
+            <div class="list-group" id="courseSection">
+                <button type='button' class='list-group-item loadInfo' data-type="course">Courses</button>
             </div>
         </div>
-        <div class="col-md-4">
-            <h1></h1>
-        </div>
-        <!-- Extra Credit Portion -->
-        <div class="hiddenModal">
-        <!-- Modal -->
+        
+        <!-- Content goes here -->
+        <div id="info" class="col-md-4 details">
+            <!-- Used for reference
+            <div class="panel panel-default">
+              <div class="panel-heading"><i></i>Title</div>
+              <div class="panel-body">
+                Information
+              </div>
+            </div>
+            -->
         </div>
     </div>
 </div>
