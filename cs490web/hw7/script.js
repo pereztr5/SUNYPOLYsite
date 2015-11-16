@@ -124,11 +124,13 @@ function loadStudentData (target, student){
 
 // Load course information based on the courses
 function loadStudentsCourse (target, courseNum) {
-    target.append("<h5>Students Enrolled:</h5>");
     // Get students in the course and load each on in the panel
     $.get("http://web.cs.sunyit.edu/~lampej/web/api/Student/getStudentsInCourse/"
         + courseNum)
         .done(function (data) {
+            target.append("<p>Current students: <strong>"
+                    + data.length + "</strong></p>"
+                    + "<h5>Students Enrolled:</h5>");
             jQuery.each(data, function(index, student) {
                 target.append($('<p/>').html(student.name));
             });
