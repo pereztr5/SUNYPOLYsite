@@ -1,0 +1,120 @@
+.clear:after {
+  clear: both;
+  display: table;
+  content: ""; }
+
+a:hover, a:visited, a:visited:hover, a:focus {
+  color: #bf4d28; }
+
+/* BACKGROUND */
+html {
+  background: url("http://lorempixel.com/350/262/nature") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media screen and (min-width: 320px) {
+    html {
+      background-image: url("http://lorempixel.com/1000/750/nature"); } }
+  @media screen and (min-width: 900px) {
+    html {
+      background-image: url("http://lorempixel.com/1300/975/nature"); } }
+  @media screen and (min-width: 1240px) {
+    html {
+      background-image: url("http://lorempixel.com/1920/1440/nature"); } }
+
+body {
+  background: none;
+  font-size: auto; }
+
+/* NAVIGATION */
+.navbar .container-fluid {
+  padding: 0; }
+
+.navbar-default {
+  background-color: black;
+  border: 0; }
+  .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:active {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px; }
+  .navbar-default .navbar-nav > li:not(:last-child) {
+    border-bottom: 0; }
+
+.menu_collapse {
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .menu_collapse {
+      display: none; } }
+
+.navbarLinks {
+  text-align: right;
+  margin: 0 1em 0 1em; }
+
+.navbar-default .navbar-collapse {
+  border: 0;
+  box-shadow: none; }
+.navbar-default .navbar-toggle {
+  border: 0; }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff; }
+
+.navbar-collapse {
+  border-top: 0; }
+  .navbar-collapse ul li {
+    text-align: right;
+    margin-right: 10px; }
+
+/* MAIN */
+main section {
+  margin: 60px 0 0 0; }
+  main section img {
+    display: block;
+    margin: 2em; }
+  main section img:nth-child(even) {
+    float: right; }
+  main section img:nth-child(odd) {
+    float: left; }
+main aside {
+  margin: 60px 0 0 0; }
+  main aside img {
+    display: block;
+    margin: auto; }
+
+.inner {
+  margin: 0 1%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 15px; }
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Great Vibes"; }
+
+h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Playfair Display"; }
+
+h3 {
+  font-family: "Playfair Display";
+  font-weight: bold; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: inline-block; }
+
+.col-md-6 {
+  padding: 0; }
+
+/* FOOTER */
+footer {
+  width: 100%;
+  text-align: center;
+  color: #fff; }
