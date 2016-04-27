@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cs350s on TP&#39;s School Site</title>
+    <link>http://web.cs.sunyit.edu/~pereztr/cs350/</link>
+    <description>Recent content in Cs350s on TP&#39;s School Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Apr 2016 16:46:45 -0400</lastBuildDate>
+    <atom:link href="http://web.cs.sunyit.edu/~pereztr/cs350/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CS350</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/</link>
+      <pubDate>Tue, 26 Apr 2016 16:46:45 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/</guid>
+      <description>
+
+&lt;h3 id=&#34;information-and-knowledge-management:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Information and Knowledge Management&lt;/h3&gt;
+
+&lt;h1 id=&#34;cs350:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;CS350&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homework 2</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/hw2/</link>
+      <pubDate>Tue, 26 Apr 2016 22:43:06 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/hw2/</guid>
+      <description>
+
+&lt;h4 id=&#34;3-19:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;3.19&lt;/h4&gt;
+
+&lt;p&gt;Consider a STUDENT relation in a UNIVERSITY database with the following attributes
+(Name, Ssn, Local_phone, Address, Cell_phone, Age, Gpa). Note that the cell phone
+may be from a different city and state (or province) from the local phone.
+A possible tuple of the relation is shown below:
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350hw2.png&#34; alt=&#34;text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: Identify the critical missing information from the Local_phone and Cell_phone attributes.
+(Hint: How do you call someone who lives in a different state or province?)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;: The critical missing information is the country code and aarea code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: Would you store this additional information in the Local_phone and Cell_phone
+attributes or add new attributes to the schema for STUDENT?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;: I would store this in the &lt;code&gt;Local_phone&lt;/code&gt; and &lt;code&gt;Cell_phone&lt;/code&gt; attribute.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: Consider the Name attribute. What are the advantages and disadvantages of splitting
+this field from one attribute into three attributes (first name, middle name, and last name)?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;: The advatages are that it would be easier to index and look up.
+Better queries can also be created. The disadvantages are that if you
+already have the name saved into one attribute it would take some time
+to go through every row and split them up.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;d&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: What general guide line would you recommend for deciding when to store information in a single attribute and when to split the information?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;:I would first think about if this information can be used to group certain rows.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;e&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: Suppose the student can have between 0 and 5 phones.
+Suggest two different designs that allow this type of information.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;: If you know the student can have multiple phone numbers you can have another table that relates to the student and it could have 0 or more.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;4-12:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;4.12&lt;/h4&gt;
+
+&lt;p&gt;Specify the following queries in SQL on the database schema of Figure 1.2.
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350fig12.png&#34; alt=&#34;fig12&#34; /&gt;
+&lt;em&gt;Figure 1.2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Retrieve the names of all senior students majoring in ‘CS’ (computer sci- ence).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT Name 
+FROM STUDENT 
+WHERE Class=4 
+AND Major=&#39;CS&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. Retrieve the names of all courses taught by Professor King in 2007 and 2008.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT COURSE.Course_name 
+FROM COURSE, SECTION 
+WHERE COURSE.Course_number=SECTION.Course_number 
+AND Instructor=&#39;King&#39; 
+AND (Year=&#39;07&#39; OR Year=&#39;08&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. For each section taught by Professor King, retrieve the course number, semester, year, and number of students who took the section.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT SECTION.Course_number, SECTION.Semester, SECTION.Year, GRADE_REPORT.Student_number
+FROM SECTION, GRADE_REPORT 
+WHERE SECTION.Instructor=&#39;King&#39; 
+AND GRADE_REPORT.Section_identifier=SECTION.Section_identifier;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;d&lt;/strong&gt;. Retrieve the name and transcript of each senior student (Class = 4) majoring in CS. A transcript includes course name, course number, credit hours, semester, year, and grade for each course completed by the student.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT STUDENT.Name , COURSE.Course_name, 
+    COURSE.Course_number, COURSE.Credit_hours, 
+    SECTION.Semester, SECTION.Year, GRADE_REPORT.Grade 
+FROM STUDENT, COURSE, SECTION, GRADE_REPORT
+WHERE STUDENT.Student_number=GRADE_REPORT.Student_number 
+AND SECTION.Section_identifier=GRADE_REPORT.Section_identifier 
+AND SECTION.Course_number=COURSE.Course_number;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homework 4</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/hw4/</link>
+      <pubDate>Wed, 27 Apr 2016 00:59:08 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/hw4/</guid>
+      <description>
+
+&lt;h4 id=&#34;5-6:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;5.6&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Retrieve the names and major departments of all straight-A students (students who have a grade of A in all their courses).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT STUDENT.Name, STUDENT.Major 
+FROM STUDENT 
+WHERE NOT EXISTS (
+    SELECT * FROM GRADE_REPORT 
+    WHERE GRADE_REPORT.Student_number = STUDENT.Student_number 
+    AND GRADE &amp;lt;&amp;gt; &amp;quot;A&amp;quot;
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. Retrieve the names and major departments of all students who do not have a grade of A in any of their courses.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT STUDENT.Name, STUDENT.Major 
+FROM STUDENT 
+WHERE NOT EXISTS (
+    SELECT * FROM GRADE_REPORT 
+    WHERE GRADE_REPORT.Student_number = STUDENT.Student_number 
+    AND GRADE = &amp;quot;A&amp;quot;
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;5-7:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;5.7&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Retrieve the names of all employees who work in the department that has the employee with the highest salary among all employees.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT e.Fname, e.Lname, e.Dno, e.Salary
+FROM Employee e
+    LEFT JOIN employee b
+        ON e.Dno = b.Dno AND e.Salary &amp;lt; b.Salary
+WHERE b.Salary is NULL;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. Retrieve the names of all employees whose supervisor’s supervisor has ‘888665555’ for Ssn.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT Employee.Fname, Employee.Lname 
+FROM Employee 
+WHERE superssn = &amp;quot;888665555&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homework 5</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/hw5/</link>
+      <pubDate>Wed, 27 Apr 2016 03:10:56 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/hw5/</guid>
+      <description>
+
+&lt;h4 id=&#34;6-23:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;6.23&lt;/h4&gt;
+
+&lt;p&gt;Specify the following queries in relational algebra on the database schema in Exercise 3.17:
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350hw5.png&#34; alt=&#34;ex317&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. For the salesperson named ‘Jane Doe’, list the following information for all the cars she sold: Serial#, Manufacturer, Sale_price.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. List the Serial# and Model of cars that have no options.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. Consider the NATURAL JOIN operation between SALESPERSON and SALE. What is the meaning of a left outer join for these tables (do not change the order of relations)? Explain with an example.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;d&lt;/strong&gt;. Write a query in relational algebra involving selection and one set opera- tion and say in words what the query does.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;6-26:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;6.26&lt;/h4&gt;
+
+&lt;p&gt;Specify queries c, d, and f of Exercise 6.18 in both tuple and domain relational
+calculus.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homework 6</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/hw6/</link>
+      <pubDate>Wed, 27 Apr 2016 03:57:13 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/hw6/</guid>
+      <description>
+
+&lt;h4 id=&#34;7-19:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;7.19&lt;/h4&gt;
+
+&lt;p&gt;Consider the ER diagram in Figure 7.20, which shows a simplified schema for an
+airline reservations system. Extract from the ER diagram the requirements and
+constraints that produced this schema. Try to be as precise as possible in your
+requirements and constraints specification.
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350fig720.png&#34; alt=&#34;fig710&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;8-29:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;8.29&lt;/h4&gt;
+
+&lt;p&gt;Consideran ONLINE_AUCTION database system in which members(buyers and sellers)
+participate in the sale of items. The data requirements for this system are
+summarized as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The online site has members, each of whom is identified by a unique member number
+and is described by an e-mail address, name, password, home address, and phone number.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A member may be a buyer or a seller. A buyer has a shipping address recorded in the
+database. A seller has a bank account number and routing number recorded in the
+database.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Items are placed by a seller for sale and are identified by a unique item number
+assigned by the system. Items are also described by an item title, a description,
+starting bid price, bidding increment, the start date of the auction, and the end
+date of the auction.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Items are also categorized based on a fixed classification hierarchy (for example,
+a modem may be classified as COMPUTER→HARDWARE →MODEM).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buyers make bids for items they are interested in. Bid price and time of bid is
+recorded. The bidder at the end of the auction with the highest bid price is
+declared the winner and a transaction between buyer and seller may then proceed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The buyer and seller may record feedback regarding their completed transactions.
+Feedback contains a rating of the other party participating in the transaction (1–10)
+and a comment.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Design an Enhanced Entity-Relationship diagram for the ONLINE_AUCTION database and build the design using a data modeling tool such as ERwin or Rational Rose.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homework 8</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/hw8/</link>
+      <pubDate>Wed, 27 Apr 2016 04:04:07 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/hw8/</guid>
+      <description>
+
+&lt;h4 id=&#34;17-41:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;17.41&lt;/h4&gt;
+
+&lt;p&gt;Write program code to access individual fields of records under each of the following
+circumstances. For each case, state the assumptions you make con- cerning pointers,
+separator characters, and so on. Determine the type of information needed in the file
+header in order for your code to be general in each case.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Fixed-length records with unspanned blocking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. Fixed-length records with spanned blocking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. Variable-length records with variable-length fields and spanned blocking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;d&lt;/strong&gt;. Variable-length records with repeating groups and spanned blocking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;e&lt;/strong&gt;. Variable-length records with optional fields and spanned blocking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;f&lt;/strong&gt;. Variable-length records that allow all three cases in parts c, d, and e&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;18-19:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;18.19&lt;/h4&gt;
+
+&lt;p&gt;A PARTS file with Part# as the key field includes records with the following Part#
+values: 23, 65, 37, 60, 46, 92, 48, 71, 56, 59, 18, 21, 10, 74, 78, 15, 16, 20, 24,
+28, 39, 43, 47, 50, 69, 75, 8, 49, 33, 38. Suppose that the search field values are
+inserted in the given order in a B+-tree of order p = 4 and pleaf = 3; show how the
+tree will expand and what the final tree will look like.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mini Project</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/cs350/miniproject/</link>
+      <pubDate>Tue, 26 Apr 2016 17:59:46 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/cs350/miniproject/</guid>
+      <description>
+
+&lt;h2 id=&#34;cyboard-queries:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Cyboard Queries&lt;/h2&gt;
+
+&lt;p&gt;Here are the queries I used in my Cyboard project&lt;br /&gt;
+Project is on &lt;a href=&#34;https://github.com/pereztr5/cyboard&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;aggregation:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Aggregation&lt;/h3&gt;
+
+&lt;h5 id=&#34;get-service-and-the-last-status-for-that-team:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get service and the last status for that team&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;Service&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;$group&amp;quot;, &amp;quot;tnumber&amp;quot;: &amp;quot;$teamnumber&amp;quot;, &amp;quot;tname&amp;quot;: &amp;quot;$teamname&amp;quot;},
+            &amp;quot;status&amp;quot;: {&amp;quot;$last&amp;quot;: &amp;quot;$details&amp;quot;}
+        }
+    },
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: &amp;quot;$_id.type&amp;quot;,
+            &amp;quot;teams&amp;quot;: {&amp;quot;$addToSet&amp;quot;: {&amp;quot;teamnumber&amp;quot;: &amp;quot;$_id.teamnumber&amp;quot;, &amp;quot;teamname&amp;quot;: &amp;quot;$_id.tname&amp;quot;, &amp;quot;status&amp;quot;: &amp;quot;$status&amp;quot;}}
+        }
+    }
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[{
+        &amp;quot;_id&amp;quot; : &amp;quot;WWW 80&amp;quot;,
+        &amp;quot;teams&amp;quot; : [
+                {
+                        &amp;quot;teamname&amp;quot; : &amp;quot;team1&amp;quot;,
+                        &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot;
+                },
+                {
+                        &amp;quot;teamname&amp;quot; : &amp;quot;team4&amp;quot;,
+                        &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot;
+                },
+                {
+                        &amp;quot;teamname&amp;quot; : &amp;quot;team7&amp;quot;,
+                        &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot;
+                },
+                ...
+        ]
+}, {
+        &amp;quot;_id&amp;quot; : &amp;quot;WWW SSH&amp;quot;,
+        &amp;quot;teams&amp;quot; : [
+                {
+                        &amp;quot;teamname&amp;quot; : &amp;quot;team7&amp;quot;,
+                        &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot;
+                },
+                {
+                        &amp;quot;teamname&amp;quot; : &amp;quot;team1&amp;quot;,
+                        &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot;
+                },
+                ...
+        ]
+},
+...
+}]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;same-as-above-except-there-is-no-nested-object:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Same as above except there is no nested object&lt;/h5&gt;
+
+&lt;p&gt;NOTE: Sort doesn&amp;rsquo;t always sort for some reason in Go
+Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;Service&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;$group&amp;quot;, &amp;quot;tnumber&amp;quot;: &amp;quot;$teamnumber&amp;quot;, &amp;quot;tname&amp;quot;: &amp;quot;$teamname&amp;quot;},
+            &amp;quot;status&amp;quot;: {&amp;quot;$last&amp;quot;: &amp;quot;$details&amp;quot;}}
+        },
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: &amp;quot;$_id.type&amp;quot;,
+            &amp;quot;teams&amp;quot;: {&amp;quot;$addToSet&amp;quot;: {&amp;quot;number&amp;quot;: &amp;quot;$_id.tnumber&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;$_id.tname&amp;quot;, &amp;quot;status&amp;quot;: &amp;quot;$status&amp;quot;}}
+        }
+    },
+    {&amp;quot;$unwind&amp;quot;: &amp;quot;$teams&amp;quot;},
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;group&amp;quot;: &amp;quot;$_id&amp;quot;, &amp;quot;tnum&amp;quot;: &amp;quot;$teams.number&amp;quot;, &amp;quot;tname&amp;quot;: &amp;quot;$teams.name&amp;quot;, &amp;quot;status&amp;quot;: &amp;quot;$teams.status&amp;quot;}},
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;tnum&amp;quot;: 1, &amp;quot;group&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 1, &amp;quot;tname&amp;quot; : &amp;quot;team1&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 2, &amp;quot;tname&amp;quot; : &amp;quot;team2&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 3, &amp;quot;tname&amp;quot; : &amp;quot;team3&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 4, &amp;quot;tname&amp;quot; : &amp;quot;team4&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 5, &amp;quot;tname&amp;quot; : &amp;quot;team5&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 1&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 6, &amp;quot;tname&amp;quot; : &amp;quot;team6&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 7, &amp;quot;tname&amp;quot; : &amp;quot;team7&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 8, &amp;quot;tname&amp;quot; : &amp;quot;team8&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 9, &amp;quot;tname&amp;quot; : &amp;quot;team9&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;tnum&amp;quot; : 10, &amp;quot;tname&amp;quot; : &amp;quot;team10&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 1, &amp;quot;tname&amp;quot; : &amp;quot;team1&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 2, &amp;quot;tname&amp;quot; : &amp;quot;team2&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 3, &amp;quot;tname&amp;quot; : &amp;quot;team3&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 4, &amp;quot;tname&amp;quot; : &amp;quot;team4&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 5, &amp;quot;tname&amp;quot; : &amp;quot;team5&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 6, &amp;quot;tname&amp;quot; : &amp;quot;team6&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 7, &amp;quot;tname&amp;quot; : &amp;quot;team7&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 8, &amp;quot;tname&amp;quot; : &amp;quot;team8&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 9, &amp;quot;tname&amp;quot; : &amp;quot;team9&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;tnum&amp;quot; : 10, &amp;quot;tname&amp;quot; : &amp;quot;team10&amp;quot;, &amp;quot;status&amp;quot; : &amp;quot;Status: 2&amp;quot; }
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-service-list-form-results:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get service list form results&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;Service&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;}},
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;group&amp;quot;: &amp;quot;$_id&amp;quot;}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Results&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;group&amp;quot; : &amp;quot;WWW SSH&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL POP&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;MAIL SMTP&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;WWW 80&amp;quot; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-ctf-list-form-results:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get CTF list form results&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;CTF&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;}},
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;group&amp;quot;: &amp;quot;$_id&amp;quot;}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Results&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;group&amp;quot; : &amp;quot;Misc-Enumeration&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;Rusted Bunions&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;SIGNUP&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;CTF-Web&amp;quot; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;group-by-challenge-and-get-the-total-amount-of-challenge-and-the-total-points:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Group by challenge and get the total amount of challenge and the total points&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.challenges.aggregate(
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;,
+            &amp;quot;total challenges&amp;quot;: {&amp;quot;$sum&amp;quot;: 1},
+            &amp;quot;total points&amp;quot;: {&amp;quot;$sum&amp;quot;: &amp;quot;$points&amp;quot;}
+        }
+    },
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;_id&amp;quot; : &amp;quot;CTF-Web&amp;quot;, &amp;quot;total challenges&amp;quot; : 16, &amp;quot;total points&amp;quot; : 100 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;CentOS&amp;quot;, &amp;quot;total challenges&amp;quot; : 3, &amp;quot;total points&amp;quot; : 40 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Misc-Enumeration&amp;quot;, &amp;quot;total challenges&amp;quot; : 100, &amp;quot;total points&amp;quot; : 100 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Rusted Bunions&amp;quot;, &amp;quot;total challenges&amp;quot; : 7, &amp;quot;total points&amp;quot; : 395 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;SIGNUP&amp;quot;, &amp;quot;total challenges&amp;quot; : 2, &amp;quot;total points&amp;quot; : 3 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Win-XP&amp;quot;, &amp;quot;total challenges&amp;quot; : 7, &amp;quot;total points&amp;quot; : 65 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-the-amount-of-challenges-a-certain-team-obtained:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get the amount of challenges a certain team obtained&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;teamname&amp;quot;: &amp;quot;team1&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;CTF&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;, &amp;quot;acquired&amp;quot;: {&amp;quot;$sum&amp;quot;: 1}}},
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;_id&amp;quot; : &amp;quot;Rusted Bunions&amp;quot;, &amp;quot;acquired&amp;quot; : 2 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;SIGNUP&amp;quot;, &amp;quot;acquired&amp;quot; : 1 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;same-as-above-except-with-the-total-points:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Same as above except with the total points&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;teamname&amp;quot;: &amp;quot;team10&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;CTF&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;, &amp;quot;acquired&amp;quot;: {&amp;quot;$sum&amp;quot;: 1}}},
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;_id&amp;quot; : &amp;quot;Misc-Enumeration&amp;quot;, &amp;quot;acquired&amp;quot; : 8, &amp;quot;points&amp;quot; : 8 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Rusted Bunions&amp;quot;, &amp;quot;acquired&amp;quot; : 4, &amp;quot;points&amp;quot; : 125 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;SIGNUP&amp;quot;, &amp;quot;acquired&amp;quot; : 2, &amp;quot;points&amp;quot; : 3 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-a-team-score-and-only-output-the-points:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get a team score and only output the points&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;teamname&amp;quot;: &amp;quot;team3&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: null,
+            &amp;quot;points&amp;quot;: {&amp;quot;$sum&amp;quot;: &amp;quot;$points&amp;quot;}
+        }
+    },
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;points&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;points&amp;quot; : 758 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-all-team-scores:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get all team scores&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: {&amp;quot;tname&amp;quot;: &amp;quot;$teamname&amp;quot;, &amp;quot;tnum&amp;quot;: &amp;quot;$teamnumber&amp;quot;},
+            &amp;quot;points&amp;quot;: {&amp;quot;$sum&amp;quot;: &amp;quot;$points&amp;quot;}
+        }
+    },
+    {&amp;quot;$project&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: 0,
+            &amp;quot;points&amp;quot;: 1,
+            &amp;quot;teamnumber&amp;quot;: &amp;quot;$_id.tnum&amp;quot;, 
+            &amp;quot;teamname&amp;quot;: &amp;quot;$_id.tname&amp;quot;
+        }
+    },
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;teamnumber&amp;quot;: 1}} 
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;points&amp;quot; : 485, &amp;quot;teamnumber&amp;quot; : 1, &amp;quot;teamname&amp;quot; : &amp;quot;team1&amp;quot; }
+{ &amp;quot;points&amp;quot; : 558, &amp;quot;teamnumber&amp;quot; : 2, &amp;quot;teamname&amp;quot; : &amp;quot;team2&amp;quot; }
+{ &amp;quot;points&amp;quot; : 758, &amp;quot;teamnumber&amp;quot; : 3, &amp;quot;teamname&amp;quot; : &amp;quot;team3&amp;quot; }
+{ &amp;quot;points&amp;quot; : 691, &amp;quot;teamnumber&amp;quot; : 4, &amp;quot;teamname&amp;quot; : &amp;quot;team4&amp;quot; }
+{ &amp;quot;points&amp;quot; : 512, &amp;quot;teamnumber&amp;quot; : 5, &amp;quot;teamname&amp;quot; : &amp;quot;team5&amp;quot; }
+{ &amp;quot;points&amp;quot; : 649, &amp;quot;teamnumber&amp;quot; : 6, &amp;quot;teamname&amp;quot; : &amp;quot;team6&amp;quot; }
+{ &amp;quot;points&amp;quot; : 497, &amp;quot;teamnumber&amp;quot; : 7, &amp;quot;teamname&amp;quot; : &amp;quot;team7&amp;quot; }
+{ &amp;quot;points&amp;quot; : 502, &amp;quot;teamnumber&amp;quot; : 8, &amp;quot;teamname&amp;quot; : &amp;quot;team8&amp;quot; }
+{ &amp;quot;points&amp;quot; : 379, &amp;quot;teamnumber&amp;quot; : 9, &amp;quot;teamname&amp;quot; : &amp;quot;team9&amp;quot; }
+{ &amp;quot;points&amp;quot; : 459, &amp;quot;teamnumber&amp;quot; : 10, &amp;quot;teamname&amp;quot; : &amp;quot;team10&amp;quot; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-last-status-of-each-team-by-service:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get last status of each team by service&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;Service&amp;quot;, &amp;quot;group&amp;quot;: &amp;quot;ROUTER PING&amp;quot;}},
+    {&amp;quot;$group&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: {&amp;quot;service&amp;quot;: &amp;quot;$group&amp;quot;, &amp;quot;tnum&amp;quot;: &amp;quot;$teamnumber&amp;quot;, &amp;quot;tname&amp;quot;: &amp;quot;$teamname&amp;quot;}, 
+            &amp;quot;status&amp;quot;: {&amp;quot;$last&amp;quot;: &amp;quot;$details&amp;quot;}
+        }
+    },
+    {&amp;quot;$project&amp;quot;: 
+        {
+            &amp;quot;_id&amp;quot;: 0,
+            &amp;quot;group&amp;quot;: &amp;quot;$_id.service&amp;quot;,
+            &amp;quot;teamnumber&amp;quot;: &amp;quot;$_id.tnum&amp;quot;,
+            &amp;quot;teamname&amp;quot;: &amp;quot;$_id.tname&amp;quot;,
+            &amp;quot;details&amp;quot;: &amp;quot;$status&amp;quot;
+        }
+    },
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;teamnumber&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 1, &amp;quot;teamname&amp;quot; : &amp;quot;team1&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 2, &amp;quot;teamname&amp;quot; : &amp;quot;team2&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 3, &amp;quot;teamname&amp;quot; : &amp;quot;team3&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 4, &amp;quot;teamname&amp;quot; : &amp;quot;team4&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 5, &amp;quot;teamname&amp;quot; : &amp;quot;team5&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 6, &amp;quot;teamname&amp;quot; : &amp;quot;team6&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 7, &amp;quot;teamname&amp;quot; : &amp;quot;team7&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 8, &amp;quot;teamname&amp;quot; : &amp;quot;team8&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 9, &amp;quot;teamname&amp;quot; : &amp;quot;team9&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+{ &amp;quot;group&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;teamnumber&amp;quot; : 10, &amp;quot;teamname&amp;quot; : &amp;quot;team10&amp;quot;, &amp;quot;details&amp;quot; : &amp;quot;Status: 0&amp;quot; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-the-objectid-of-the-last-document-in-results:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get the ObjectID of the last document in results&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: null, &amp;quot;last&amp;quot;: {&amp;quot;$last&amp;quot;: &amp;quot;$_id&amp;quot;}}},
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;last&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;last&amp;quot; : ObjectId(&amp;quot;571be338afbeb9566a40683d&amp;quot;) }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-the-objectid-of-the-last-document-that-is-type-service-in-results:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get the ObjectID of the last document that is type &amp;ldquo;Service&amp;rdquo; in results&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$match&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;Service&amp;quot;}},
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}},
+    {&amp;quot;$group&amp;quot;: {&amp;quot;_id&amp;quot;: null, &amp;quot;last&amp;quot;: {&amp;quot;$last&amp;quot;: &amp;quot;$_id&amp;quot;}}},
+    {&amp;quot;$project&amp;quot;: {&amp;quot;_id&amp;quot;: 0, &amp;quot;last&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;last&amp;quot; : ObjectId(&amp;quot;571be265afbeb9566a406839&amp;quot;) }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;get-the-amount-of-documents-grouped-by-group:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Get the amount of documents grouped by group&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$group&amp;quot;:
+        {
+            &amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;,
+            &amp;quot;total&amp;quot;: {&amp;quot;$sum&amp;quot;: 1}
+        }
+    },
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;_id&amp;quot; : &amp;quot;CTF-Web&amp;quot;, &amp;quot;total&amp;quot; : 13 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Extra&amp;quot;, &amp;quot;total&amp;quot; : 1 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;total&amp;quot; : 1173 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;total&amp;quot; : 1171 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Misc-Enumeration&amp;quot;, &amp;quot;total&amp;quot; : 28 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;total&amp;quot; : 1279 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Rusted Bunions&amp;quot;, &amp;quot;total&amp;quot; : 31 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;SIGNUP&amp;quot;, &amp;quot;total&amp;quot; : 17 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;WWW 80&amp;quot;, &amp;quot;total&amp;quot; : 1271 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;WWW SSH&amp;quot;, &amp;quot;total&amp;quot; : 1174 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;same-as-above-except-with-total-points:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Same as above except with total points&lt;/h5&gt;
+
+&lt;p&gt;Query&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.results.aggregate(
+    {&amp;quot;$group&amp;quot;:
+        {
+            &amp;quot;_id&amp;quot;: &amp;quot;$group&amp;quot;,
+            &amp;quot;total&amp;quot;: {&amp;quot;$sum&amp;quot;: 1},
+            &amp;quot;points&amp;quot;: {&amp;quot;$sum&amp;quot;: &amp;quot;$points&amp;quot;}
+        }
+    },
+    {&amp;quot;$sort&amp;quot;: {&amp;quot;_id&amp;quot;: 1}}
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &amp;quot;_id&amp;quot; : &amp;quot;CTF-Web&amp;quot;, &amp;quot;amt&amp;quot; : 13, &amp;quot;points&amp;quot; : 80 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Extra&amp;quot;, &amp;quot;amt&amp;quot; : 1, &amp;quot;points&amp;quot; : 250 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;MAIL POP&amp;quot;, &amp;quot;amt&amp;quot; : 1173, &amp;quot;points&amp;quot; : 104 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;MAIL SMTP&amp;quot;, &amp;quot;amt&amp;quot; : 1171, &amp;quot;points&amp;quot; : 15 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Misc-Enumeration&amp;quot;, &amp;quot;amt&amp;quot; : 28, &amp;quot;points&amp;quot; : 28 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;ROUTER PING&amp;quot;, &amp;quot;amt&amp;quot; : 1279, &amp;quot;points&amp;quot; : 2561 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;Rusted Bunions&amp;quot;, &amp;quot;amt&amp;quot; : 31, &amp;quot;points&amp;quot; : 1055 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;SIGNUP&amp;quot;, &amp;quot;amt&amp;quot; : 17, &amp;quot;points&amp;quot; : 22 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;WWW 80&amp;quot;, &amp;quot;amt&amp;quot; : 1271, &amp;quot;points&amp;quot; : 1057 }
+{ &amp;quot;_id&amp;quot; : &amp;quot;WWW SSH&amp;quot;, &amp;quot;amt&amp;quot; : 1174, &amp;quot;points&amp;quot; : 318 }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1s on TP&#39;s School Site</title>
+    <link>http://web.cs.sunyit.edu/~pereztr/1/</link>
+    <description>Recent content in 1s on TP&#39;s School Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Apr 2016 05:25:43 -0400</lastBuildDate>
+    <atom:link href="http://web.cs.sunyit.edu/~pereztr/1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Main</title>
+      <link>http://web.cs.sunyit.edu/~pereztr/1/</link>
+      <pubDate>Tue, 26 Apr 2016 05:25:43 -0400</pubDate>
+      
+      <guid>http://web.cs.sunyit.edu/~pereztr/1/</guid>
+      <description>
+
+&lt;h3 id=&#34;home:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Home&lt;/h3&gt;
+
+&lt;h2 id=&#34;school-documention:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;School Documention&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

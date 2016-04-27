@@ -1,9 +1,0 @@
-3.19
-
-a. The critical missing information is the country code and aarea code.
-
-b. I would store this in the Local_phone and Cell_phone attribute.
-c. The advatages are that it would be easier to index and look up. Better queries can also be created. The disadvantages are that if you already have the name saved into one attribute it would take some time to go through every row and split them up.
-d. I would first think about if this information can be used to group certain rows.
-e. If you know the student can have multiple phone numbers you can have another table that relates to the student and it could have 0 or more.
-

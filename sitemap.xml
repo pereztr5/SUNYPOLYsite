@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/</loc>
+    <lastmod>2016-04-26T05:25:43-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/1/</loc>
+    <lastmod>2016-04-26T05:25:43-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/</loc>
+    <lastmod>2016-04-26T16:46:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/hw2/</loc>
+    <lastmod>2016-04-26T22:43:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/hw4/</loc>
+    <lastmod>2016-04-27T00:59:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/hw5/</loc>
+    <lastmod>2016-04-27T03:10:56-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/hw6/</loc>
+    <lastmod>2016-04-27T03:57:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/hw8/</loc>
+    <lastmod>2016-04-27T04:04:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://web.cs.sunyit.edu/~pereztr/cs350/miniproject/</loc>
+    <lastmod>2016-04-26T17:59:46-04:00</lastmod>
+  </url>
+  
+</urlset>

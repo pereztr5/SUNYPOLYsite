@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.15" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    
+    <title>Mini Project</title>
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/hugo-theme.css" rel="stylesheet">
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    <link href="/css/custom.css" rel="stylesheet">
+
+  </head>
+  <body class="" data-url="/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://web.cs.sunyit.edu/~pereztr">
+    <svg width="140" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+         
+          <g>
+            <title>Layer 1</title>
+              <text style="cursor: move;" stroke="#000000" xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_1" y="22" x="70.8125" stroke-width="0" fill="#007fff">TP&#x27;s Site</text>
+           </g>
+    </svg>
+</a>
+
+      
+    </div>
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/~pereztr/1/">
+        <a href="/~pereztr/1/">
+          <span>
+            
+              <b>1. </b>
+            
+             Main
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/~pereztr/cs350/">
+        <a href="/~pereztr/cs350/">
+          <span>
+            
+              <b>2. </b>
+            
+             CS350
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/~pereztr/cs350/hw2/">
+              <a href="/~pereztr/cs350/hw2/">
+                <span>Homework 2</span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/~pereztr/cs350/hw4/">
+              <a href="/~pereztr/cs350/hw4/">
+                <span>Homework 4</span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/~pereztr/cs350/hw5/">
+              <a href="/~pereztr/cs350/hw5/">
+                <span>Homework 5</span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/~pereztr/cs350/hw6/">
+              <a href="/~pereztr/cs350/hw6/">
+                <span>Homework 6</span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/~pereztr/cs350/hw8/">
+              <a href="/~pereztr/cs350/hw8/">
+                <span>Homework 8</span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/~pereztr/cs350/miniproject/">
+              <a href="/~pereztr/cs350/miniproject/">
+                <span>Mini Project</span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                
+                  
+                    
+                    
+                <a href="/~pereztr/cs350/" itemprop="url"><span itemprop="title">CS350</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Mini Project</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#cyboard-queries:d680e8a854a7cbad6d490c445cba2eba">Cyboard Queries</a>
+<ul>
+<li><a href="#aggregation:d680e8a854a7cbad6d490c445cba2eba">Aggregation</a>
+<ul>
+<li>
+<ul>
+<li><a href="#get-service-and-the-last-status-for-that-team:d680e8a854a7cbad6d490c445cba2eba">Get service and the last status for that team</a></li>
+<li><a href="#same-as-above-except-there-is-no-nested-object:d680e8a854a7cbad6d490c445cba2eba">Same as above except there is no nested object</a></li>
+<li><a href="#get-service-list-form-results:d680e8a854a7cbad6d490c445cba2eba">Get service list form results</a></li>
+<li><a href="#get-ctf-list-form-results:d680e8a854a7cbad6d490c445cba2eba">Get CTF list form results</a></li>
+<li><a href="#group-by-challenge-and-get-the-total-amount-of-challenge-and-the-total-points:d680e8a854a7cbad6d490c445cba2eba">Group by challenge and get the total amount of challenge and the total points</a></li>
+<li><a href="#get-the-amount-of-challenges-a-certain-team-obtained:d680e8a854a7cbad6d490c445cba2eba">Get the amount of challenges a certain team obtained</a></li>
+<li><a href="#same-as-above-except-with-the-total-points:d680e8a854a7cbad6d490c445cba2eba">Same as above except with the total points</a></li>
+<li><a href="#get-a-team-score-and-only-output-the-points:d680e8a854a7cbad6d490c445cba2eba">Get a team score and only output the points</a></li>
+<li><a href="#get-all-team-scores:d680e8a854a7cbad6d490c445cba2eba">Get all team scores</a></li>
+<li><a href="#get-last-status-of-each-team-by-service:d680e8a854a7cbad6d490c445cba2eba">Get last status of each team by service</a></li>
+<li><a href="#get-the-objectid-of-the-last-document-in-results:d680e8a854a7cbad6d490c445cba2eba">Get the ObjectID of the last document in results</a></li>
+<li><a href="#get-the-objectid-of-the-last-document-that-is-type-service-in-results:d680e8a854a7cbad6d490c445cba2eba">Get the ObjectID of the last document that is type &ldquo;Service&rdquo; in results</a></li>
+<li><a href="#get-the-amount-of-documents-grouped-by-group:d680e8a854a7cbad6d490c445cba2eba">Get the amount of documents grouped by group</a></li>
+<li><a href="#same-as-above-except-with-total-points:d680e8a854a7cbad6d490c445cba2eba">Same as above except with total points</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Mini Project</h1>
+                
+
+
+
+<h2 id="cyboard-queries:d680e8a854a7cbad6d490c445cba2eba">Cyboard Queries</h2>
+
+<p>Here are the queries I used in my Cyboard project<br />
+Project is on <a href="https://github.com/pereztr5/cyboard">Github</a></p>
+
+<h3 id="aggregation:d680e8a854a7cbad6d490c445cba2eba">Aggregation</h3>
+
+<h5 id="get-service-and-the-last-status-for-that-team:d680e8a854a7cbad6d490c445cba2eba">Get service and the last status for that team</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;Service&quot;}},
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: {&quot;type&quot;: &quot;$group&quot;, &quot;tnumber&quot;: &quot;$teamnumber&quot;, &quot;tname&quot;: &quot;$teamname&quot;},
+            &quot;status&quot;: {&quot;$last&quot;: &quot;$details&quot;}
+        }
+    },
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: &quot;$_id.type&quot;,
+            &quot;teams&quot;: {&quot;$addToSet&quot;: {&quot;teamnumber&quot;: &quot;$_id.teamnumber&quot;, &quot;teamname&quot;: &quot;$_id.tname&quot;, &quot;status&quot;: &quot;$status&quot;}}
+        }
+    }
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>[{
+        &quot;_id&quot; : &quot;WWW 80&quot;,
+        &quot;teams&quot; : [
+                {
+                        &quot;teamname&quot; : &quot;team1&quot;,
+                        &quot;status&quot; : &quot;Status: 2&quot;
+                },
+                {
+                        &quot;teamname&quot; : &quot;team4&quot;,
+                        &quot;status&quot; : &quot;Status: 2&quot;
+                },
+                {
+                        &quot;teamname&quot; : &quot;team7&quot;,
+                        &quot;status&quot; : &quot;Status: 2&quot;
+                },
+                ...
+        ]
+}, {
+        &quot;_id&quot; : &quot;WWW SSH&quot;,
+        &quot;teams&quot; : [
+                {
+                        &quot;teamname&quot; : &quot;team7&quot;,
+                        &quot;status&quot; : &quot;Status: 2&quot;
+                },
+                {
+                        &quot;teamname&quot; : &quot;team1&quot;,
+                        &quot;status&quot; : &quot;Status: 2&quot;
+                },
+                ...
+        ]
+},
+...
+}]
+</code></pre>
+
+<h5 id="same-as-above-except-there-is-no-nested-object:d680e8a854a7cbad6d490c445cba2eba">Same as above except there is no nested object</h5>
+
+<p>NOTE: Sort doesn&rsquo;t always sort for some reason in Go
+Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;Service&quot;}},
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: {&quot;type&quot;: &quot;$group&quot;, &quot;tnumber&quot;: &quot;$teamnumber&quot;, &quot;tname&quot;: &quot;$teamname&quot;},
+            &quot;status&quot;: {&quot;$last&quot;: &quot;$details&quot;}}
+        },
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: &quot;$_id.type&quot;,
+            &quot;teams&quot;: {&quot;$addToSet&quot;: {&quot;number&quot;: &quot;$_id.tnumber&quot;, &quot;name&quot;: &quot;$_id.tname&quot;, &quot;status&quot;: &quot;$status&quot;}}
+        }
+    },
+    {&quot;$unwind&quot;: &quot;$teams&quot;},
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;group&quot;: &quot;$_id&quot;, &quot;tnum&quot;: &quot;$teams.number&quot;, &quot;tname&quot;: &quot;$teams.name&quot;, &quot;status&quot;: &quot;$teams.status&quot;}},
+    {&quot;$sort&quot;: {&quot;tnum&quot;: 1, &quot;group&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 1, &quot;tname&quot; : &quot;team1&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 2, &quot;tname&quot; : &quot;team2&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 3, &quot;tname&quot; : &quot;team3&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 4, &quot;tname&quot; : &quot;team4&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 5, &quot;tname&quot; : &quot;team5&quot;, &quot;status&quot; : &quot;Status: 1&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 6, &quot;tname&quot; : &quot;team6&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 7, &quot;tname&quot; : &quot;team7&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 8, &quot;tname&quot; : &quot;team8&quot;, &quot;status&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 9, &quot;tname&quot; : &quot;team9&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot;, &quot;tnum&quot; : 10, &quot;tname&quot; : &quot;team10&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 1, &quot;tname&quot; : &quot;team1&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 2, &quot;tname&quot; : &quot;team2&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 3, &quot;tname&quot; : &quot;team3&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 4, &quot;tname&quot; : &quot;team4&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 5, &quot;tname&quot; : &quot;team5&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 6, &quot;tname&quot; : &quot;team6&quot;, &quot;status&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 7, &quot;tname&quot; : &quot;team7&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 8, &quot;tname&quot; : &quot;team8&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 9, &quot;tname&quot; : &quot;team9&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot;, &quot;tnum&quot; : 10, &quot;tname&quot; : &quot;team10&quot;, &quot;status&quot; : &quot;Status: 2&quot; }
+...
+</code></pre>
+
+<h5 id="get-service-list-form-results:d680e8a854a7cbad6d490c445cba2eba">Get service list form results</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;Service&quot;}},
+    {&quot;$group&quot;: {&quot;_id&quot;: &quot;$group&quot;}},
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;group&quot;: &quot;$_id&quot;}}
+)
+</code></pre>
+
+<p>Results</p>
+
+<pre><code>{ &quot;group&quot; : &quot;WWW SSH&quot; }
+{ &quot;group&quot; : &quot;MAIL POP&quot; }
+{ &quot;group&quot; : &quot;MAIL SMTP&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot; }
+{ &quot;group&quot; : &quot;WWW 80&quot; }
+</code></pre>
+
+<h5 id="get-ctf-list-form-results:d680e8a854a7cbad6d490c445cba2eba">Get CTF list form results</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;CTF&quot;}},
+    {&quot;$group&quot;: {&quot;_id&quot;: &quot;$group&quot;}},
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;group&quot;: &quot;$_id&quot;}}
+)
+</code></pre>
+
+<p>Results</p>
+
+<pre><code>{ &quot;group&quot; : &quot;Misc-Enumeration&quot; }
+{ &quot;group&quot; : &quot;Rusted Bunions&quot; }
+{ &quot;group&quot; : &quot;SIGNUP&quot; }
+{ &quot;group&quot; : &quot;CTF-Web&quot; }
+</code></pre>
+
+<h5 id="group-by-challenge-and-get-the-total-amount-of-challenge-and-the-total-points:d680e8a854a7cbad6d490c445cba2eba">Group by challenge and get the total amount of challenge and the total points</h5>
+
+<p>Query</p>
+
+<pre><code>db.challenges.aggregate(
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: &quot;$group&quot;,
+            &quot;total challenges&quot;: {&quot;$sum&quot;: 1},
+            &quot;total points&quot;: {&quot;$sum&quot;: &quot;$points&quot;}
+        }
+    },
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;_id&quot; : &quot;CTF-Web&quot;, &quot;total challenges&quot; : 16, &quot;total points&quot; : 100 }
+{ &quot;_id&quot; : &quot;CentOS&quot;, &quot;total challenges&quot; : 3, &quot;total points&quot; : 40 }
+{ &quot;_id&quot; : &quot;Misc-Enumeration&quot;, &quot;total challenges&quot; : 100, &quot;total points&quot; : 100 }
+{ &quot;_id&quot; : &quot;Rusted Bunions&quot;, &quot;total challenges&quot; : 7, &quot;total points&quot; : 395 }
+{ &quot;_id&quot; : &quot;SIGNUP&quot;, &quot;total challenges&quot; : 2, &quot;total points&quot; : 3 }
+{ &quot;_id&quot; : &quot;Win-XP&quot;, &quot;total challenges&quot; : 7, &quot;total points&quot; : 65 }
+</code></pre>
+
+<h5 id="get-the-amount-of-challenges-a-certain-team-obtained:d680e8a854a7cbad6d490c445cba2eba">Get the amount of challenges a certain team obtained</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;teamname&quot;: &quot;team1&quot;, &quot;type&quot;: &quot;CTF&quot;}},
+    {&quot;$group&quot;: {&quot;_id&quot;: &quot;$group&quot;, &quot;acquired&quot;: {&quot;$sum&quot;: 1}}},
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;_id&quot; : &quot;Rusted Bunions&quot;, &quot;acquired&quot; : 2 }
+{ &quot;_id&quot; : &quot;SIGNUP&quot;, &quot;acquired&quot; : 1 }
+</code></pre>
+
+<h5 id="same-as-above-except-with-the-total-points:d680e8a854a7cbad6d490c445cba2eba">Same as above except with the total points</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;teamname&quot;: &quot;team10&quot;, &quot;type&quot;: &quot;CTF&quot;}},
+    {&quot;$group&quot;: {&quot;_id&quot;: &quot;$group&quot;, &quot;acquired&quot;: {&quot;$sum&quot;: 1}}},
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;_id&quot; : &quot;Misc-Enumeration&quot;, &quot;acquired&quot; : 8, &quot;points&quot; : 8 }
+{ &quot;_id&quot; : &quot;Rusted Bunions&quot;, &quot;acquired&quot; : 4, &quot;points&quot; : 125 }
+{ &quot;_id&quot; : &quot;SIGNUP&quot;, &quot;acquired&quot; : 2, &quot;points&quot; : 3 }
+</code></pre>
+
+<h5 id="get-a-team-score-and-only-output-the-points:d680e8a854a7cbad6d490c445cba2eba">Get a team score and only output the points</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;teamname&quot;: &quot;team3&quot;}},
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: null,
+            &quot;points&quot;: {&quot;$sum&quot;: &quot;$points&quot;}
+        }
+    },
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;points&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;points&quot; : 758 }
+</code></pre>
+
+<h5 id="get-all-team-scores:d680e8a854a7cbad6d490c445cba2eba">Get all team scores</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: {&quot;tname&quot;: &quot;$teamname&quot;, &quot;tnum&quot;: &quot;$teamnumber&quot;},
+            &quot;points&quot;: {&quot;$sum&quot;: &quot;$points&quot;}
+        }
+    },
+    {&quot;$project&quot;: 
+        {
+            &quot;_id&quot;: 0,
+            &quot;points&quot;: 1,
+            &quot;teamnumber&quot;: &quot;$_id.tnum&quot;, 
+            &quot;teamname&quot;: &quot;$_id.tname&quot;
+        }
+    },
+    {&quot;$sort&quot;: {&quot;teamnumber&quot;: 1}} 
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;points&quot; : 485, &quot;teamnumber&quot; : 1, &quot;teamname&quot; : &quot;team1&quot; }
+{ &quot;points&quot; : 558, &quot;teamnumber&quot; : 2, &quot;teamname&quot; : &quot;team2&quot; }
+{ &quot;points&quot; : 758, &quot;teamnumber&quot; : 3, &quot;teamname&quot; : &quot;team3&quot; }
+{ &quot;points&quot; : 691, &quot;teamnumber&quot; : 4, &quot;teamname&quot; : &quot;team4&quot; }
+{ &quot;points&quot; : 512, &quot;teamnumber&quot; : 5, &quot;teamname&quot; : &quot;team5&quot; }
+{ &quot;points&quot; : 649, &quot;teamnumber&quot; : 6, &quot;teamname&quot; : &quot;team6&quot; }
+{ &quot;points&quot; : 497, &quot;teamnumber&quot; : 7, &quot;teamname&quot; : &quot;team7&quot; }
+{ &quot;points&quot; : 502, &quot;teamnumber&quot; : 8, &quot;teamname&quot; : &quot;team8&quot; }
+{ &quot;points&quot; : 379, &quot;teamnumber&quot; : 9, &quot;teamname&quot; : &quot;team9&quot; }
+{ &quot;points&quot; : 459, &quot;teamnumber&quot; : 10, &quot;teamname&quot; : &quot;team10&quot; }
+</code></pre>
+
+<h5 id="get-last-status-of-each-team-by-service:d680e8a854a7cbad6d490c445cba2eba">Get last status of each team by service</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;Service&quot;, &quot;group&quot;: &quot;ROUTER PING&quot;}},
+    {&quot;$group&quot;: 
+        {
+            &quot;_id&quot;: {&quot;service&quot;: &quot;$group&quot;, &quot;tnum&quot;: &quot;$teamnumber&quot;, &quot;tname&quot;: &quot;$teamname&quot;}, 
+            &quot;status&quot;: {&quot;$last&quot;: &quot;$details&quot;}
+        }
+    },
+    {&quot;$project&quot;: 
+        {
+            &quot;_id&quot;: 0,
+            &quot;group&quot;: &quot;$_id.service&quot;,
+            &quot;teamnumber&quot;: &quot;$_id.tnum&quot;,
+            &quot;teamname&quot;: &quot;$_id.tname&quot;,
+            &quot;details&quot;: &quot;$status&quot;
+        }
+    },
+    {&quot;$sort&quot;: {&quot;teamnumber&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 1, &quot;teamname&quot; : &quot;team1&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 2, &quot;teamname&quot; : &quot;team2&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 3, &quot;teamname&quot; : &quot;team3&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 4, &quot;teamname&quot; : &quot;team4&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 5, &quot;teamname&quot; : &quot;team5&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 6, &quot;teamname&quot; : &quot;team6&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 7, &quot;teamname&quot; : &quot;team7&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 8, &quot;teamname&quot; : &quot;team8&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 9, &quot;teamname&quot; : &quot;team9&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+{ &quot;group&quot; : &quot;ROUTER PING&quot;, &quot;teamnumber&quot; : 10, &quot;teamname&quot; : &quot;team10&quot;, &quot;details&quot; : &quot;Status: 0&quot; }
+</code></pre>
+
+<h5 id="get-the-objectid-of-the-last-document-in-results:d680e8a854a7cbad6d490c445cba2eba">Get the ObjectID of the last document in results</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}},
+    {&quot;$group&quot;: {&quot;_id&quot;: null, &quot;last&quot;: {&quot;$last&quot;: &quot;$_id&quot;}}},
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;last&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;last&quot; : ObjectId(&quot;571be338afbeb9566a40683d&quot;) }
+</code></pre>
+
+<h5 id="get-the-objectid-of-the-last-document-that-is-type-service-in-results:d680e8a854a7cbad6d490c445cba2eba">Get the ObjectID of the last document that is type &ldquo;Service&rdquo; in results</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$match&quot;: {&quot;type&quot;: &quot;Service&quot;}},
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}},
+    {&quot;$group&quot;: {&quot;_id&quot;: null, &quot;last&quot;: {&quot;$last&quot;: &quot;$_id&quot;}}},
+    {&quot;$project&quot;: {&quot;_id&quot;: 0, &quot;last&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;last&quot; : ObjectId(&quot;571be265afbeb9566a406839&quot;) }
+</code></pre>
+
+<h5 id="get-the-amount-of-documents-grouped-by-group:d680e8a854a7cbad6d490c445cba2eba">Get the amount of documents grouped by group</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$group&quot;:
+        {
+            &quot;_id&quot;: &quot;$group&quot;,
+            &quot;total&quot;: {&quot;$sum&quot;: 1}
+        }
+    },
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;_id&quot; : &quot;CTF-Web&quot;, &quot;total&quot; : 13 }
+{ &quot;_id&quot; : &quot;Extra&quot;, &quot;total&quot; : 1 }
+{ &quot;_id&quot; : &quot;MAIL POP&quot;, &quot;total&quot; : 1173 }
+{ &quot;_id&quot; : &quot;MAIL SMTP&quot;, &quot;total&quot; : 1171 }
+{ &quot;_id&quot; : &quot;Misc-Enumeration&quot;, &quot;total&quot; : 28 }
+{ &quot;_id&quot; : &quot;ROUTER PING&quot;, &quot;total&quot; : 1279 }
+{ &quot;_id&quot; : &quot;Rusted Bunions&quot;, &quot;total&quot; : 31 }
+{ &quot;_id&quot; : &quot;SIGNUP&quot;, &quot;total&quot; : 17 }
+{ &quot;_id&quot; : &quot;WWW 80&quot;, &quot;total&quot; : 1271 }
+{ &quot;_id&quot; : &quot;WWW SSH&quot;, &quot;total&quot; : 1174 }
+</code></pre>
+
+<h5 id="same-as-above-except-with-total-points:d680e8a854a7cbad6d490c445cba2eba">Same as above except with total points</h5>
+
+<p>Query</p>
+
+<pre><code>db.results.aggregate(
+    {&quot;$group&quot;:
+        {
+            &quot;_id&quot;: &quot;$group&quot;,
+            &quot;total&quot;: {&quot;$sum&quot;: 1},
+            &quot;points&quot;: {&quot;$sum&quot;: &quot;$points&quot;}
+        }
+    },
+    {&quot;$sort&quot;: {&quot;_id&quot;: 1}}
+)
+</code></pre>
+
+<p>Result</p>
+
+<pre><code>{ &quot;_id&quot; : &quot;CTF-Web&quot;, &quot;amt&quot; : 13, &quot;points&quot; : 80 }
+{ &quot;_id&quot; : &quot;Extra&quot;, &quot;amt&quot; : 1, &quot;points&quot; : 250 }
+{ &quot;_id&quot; : &quot;MAIL POP&quot;, &quot;amt&quot; : 1173, &quot;points&quot; : 104 }
+{ &quot;_id&quot; : &quot;MAIL SMTP&quot;, &quot;amt&quot; : 1171, &quot;points&quot; : 15 }
+{ &quot;_id&quot; : &quot;Misc-Enumeration&quot;, &quot;amt&quot; : 28, &quot;points&quot; : 28 }
+{ &quot;_id&quot; : &quot;ROUTER PING&quot;, &quot;amt&quot; : 1279, &quot;points&quot; : 2561 }
+{ &quot;_id&quot; : &quot;Rusted Bunions&quot;, &quot;amt&quot; : 31, &quot;points&quot; : 1055 }
+{ &quot;_id&quot; : &quot;SIGNUP&quot;, &quot;amt&quot; : 17, &quot;points&quot; : 22 }
+{ &quot;_id&quot; : &quot;WWW 80&quot;, &quot;amt&quot; : 1271, &quot;points&quot; : 1057 }
+{ &quot;_id&quot; : &quot;WWW SSH&quot;, &quot;amt&quot; : 1174, &quot;points&quot; : 318 }
+</code></pre>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/jquery-2.x.min.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/perfect-scrollbar.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.sticky-kit.min.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/html5shiv-printshiv.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+
