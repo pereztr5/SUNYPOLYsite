@@ -39,7 +39,7 @@
 (Name, Ssn, Local_phone, Address, Cell_phone, Age, Gpa). Note that the cell phone
 may be from a different city and state (or province) from the local phone.
 A possible tuple of the relation is shown below:
-&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350hw2.png&#34; alt=&#34;text&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/~pereztr/images/cs350hw2.png&#34; alt=&#34;text&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. &lt;em&gt;Q&lt;/em&gt;: Identify the critical missing information from the Local_phone and Cell_phone attributes.
 (Hint: How do you call someone who lives in a different state or province?)&lt;/p&gt;
@@ -73,7 +73,7 @@ Suggest two different designs that allow this type of information.&lt;/p&gt;
 &lt;h4 id=&#34;4-12:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;4.12&lt;/h4&gt;
 
 &lt;p&gt;Specify the following queries in SQL on the database schema of Figure 1.2.
-&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350fig12.png&#34; alt=&#34;fig12&#34; /&gt;
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/~pereztr/images/cs350fig12.png&#34; alt=&#34;fig12&#34; /&gt;
 &lt;em&gt;Figure 1.2&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Retrieve the names of all senior students majoring in ‘CS’ (computer sci- ence).&lt;/p&gt;
@@ -179,7 +179,7 @@ WHERE superssn = &amp;quot;888665555&amp;quot;;
 &lt;h4 id=&#34;6-23:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;6.23&lt;/h4&gt;
 
 &lt;p&gt;Specify the following queries in relational algebra on the database schema in Exercise 3.17:
-&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350hw5.png&#34; alt=&#34;ex317&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/~pereztr/images/cs350hw5.png&#34; alt=&#34;ex317&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. For the salesperson named ‘Jane Doe’, list the following information for all the cars she sold: Serial#, Manufacturer, Sale_price.&lt;/p&gt;
 
@@ -212,7 +212,7 @@ calculus.&lt;/p&gt;
 airline reservations system. Extract from the ER diagram the requirements and
 constraints that produced this schema. Try to be as precise as possible in your
 requirements and constraints specification.
-&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/images/cs350fig720.png&#34; alt=&#34;fig710&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://web.cs.sunyit.edu/~pereztr/~pereztr/images/cs350fig720.png&#34; alt=&#34;fig710&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
